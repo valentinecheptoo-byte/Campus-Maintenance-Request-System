@@ -39,3 +39,23 @@ function clearErrors() {
         field.title = "";
     });
 }
+
+// Count characters in the description
+description.addEventListener("input", function () {
+    console.log("Characters entered: " + description.value.length);
+});
+
+// Display selected category
+category.addEventListener("change", function () {
+    console.log("Selected Category: " + category.value);
+});
+
+// Highlight the description box when the user clicks on it
+description.addEventListener("focus", function () {
+    description.style.backgroundColor = "#f0f8ff";
+});
+
+// Return the description box to its normal color
+description.addEventListener("blur", function () {
+    description.style.backgroundColor = "";
+});
