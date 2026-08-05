@@ -1,5 +1,6 @@
 <?php
 
+// Database connection
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,29 +8,32 @@ $database = "campus_maintenance";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
+// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$full_name = $_POST['full_name'];
-$student_id = $_POST['student_id'];
+// Get data from the form
+$fullname = $_POST['fullname'];
+$studentid = $_POST['studentid'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $building = $_POST['building'];
-$room_number = $_POST['room_number'];
 $category = $_POST['category'];
+$date = $_POST['date'];
+$priority = $_POST['priority'];
 $description = $_POST['description'];
-$urgency = $_POST['urgency'];
-$date_reported = $_POST['date_reported'];
 
+// Insert data into database
 $sql = "INSERT INTO maintenance_requests
-(full_name, student_id, email, phone, building, room_number, category, description, urgency, date_reported)
+(fullname, studentid, email, phone, building, category, date_reported, priority, description)
 
 VALUES
-('$full_name','$student_id','$email','$phone','$building','$room_number','$category','$description','$urgency','$date_reported')";
+('$fullname','$studentid','$email','$phone','$building','$category','$date','$priority','$description')";
 
 if ($conn->query($sql) === TRUE) {
     echo "<h2>Maintenance request submitted successfully!</h2>";
+    echo "<a href='index.html'>Go Back</a>";
 } else {
     echo "Error: " . $conn->error;
 }
