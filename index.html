@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Fault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Maintenance Fault Reporting System</h1>
+        <section id="services">
+    <h2>Common Maintenance Issues</h2>
+
+    <ul>
+        <li>Broken classroom lights</li>
+        <li>Leaking water pipes</li>
+        <li>Damaged desks and chairs</li>
+        <li>Faulty electrical sockets</li>
+        <li>Poor internet connectivity</li>
+        <li>Blocked drainage systems</li>
+    </ul>
+</section>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Fault</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Maintenance Fault Report Form</h2>
+
+            <form action="process.php" method="post">
+
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <label for="studentid">Student/Staff ID</label><br>
+                <input type="text" id="studentid" name="studentid" required><br><br>
+
+                <label for="email">Email Address</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Phone Number</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="building">Building</label><br>
+                <select id="building" name="building" required>
+                    <option value="">--Select Building--</option>
+                    <option>Library</option>
+                    <option>Administration Block</option>
+                    <option>Lecture Hall</option>
+                    <option>Hostel</option>
+                    <option>Laboratory</option>
+                </select><br><br>
+
+                <label for="category">Fault Category</label><br>
+                <select id="category" name="category" required>
+                    <option value="">--Select Category--</option>
+                    <option>Electrical</option>
+                    <option>Plumbing</option>
+                    <option>Furniture</option>
+                    <option>Internet</option>
+                    <option>Cleaning</option>
+                    <option>Other</option>
+                </select><br><br>
+
+                <label for="date">Date Reported</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <p><strong>Priority Level</strong></p>
+
+                <input type="radio" id="low" name="priority" value="Low">
+                <label for="low">Low</label>
+
+                <input type="radio" id="medium" name="priority" value="Medium">
+                <label for="medium">Medium</label>
+
+                <input type="radio" id="high" name="priority" value="High">
+                <label for="high">High</label>
+
+                <br><br>
+
+                <label for="description">Describe the Problem</label><br>
+                <textarea id="description" name="description" rows="5" cols="40" required></textarea>
+
+                <br><br>
+
+                <input type="submit" value="Submit Report">
+                <input type="reset" value="Clear Form">
+
+            </form>
+        </section>
+
+
+<section id="tips">
+    <h2>Reporting Tips</h2>
+    <ul>
+        <li>Provide the exact location of the fault.</li>
+        <li>Describe the issue clearly and accurately.</li>
+        <li>Select the correct priority level.</li>
+        <li>Include your contact details for follow-up.</li>
+    </ul>
+</section>
+</main>
+<footer>
+    <p>&copy; 2026 Campus Maintenance Fault Reporting System</p>
+</footer>
+
+</body>
+</html>
