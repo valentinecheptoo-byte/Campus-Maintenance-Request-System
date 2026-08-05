@@ -106,3 +106,17 @@ form.addEventListener("submit", function (event) {
     }
 
 });
+
+// Highlight invalid fields while typing
+document.querySelectorAll("input, textarea").forEach(field => {
+
+    field.addEventListener("input", function () {
+
+        if (field.value.trim() !== "") {
+            field.style.border = "";
+            field.title = "";
+        }
+
+    });
+
+});
