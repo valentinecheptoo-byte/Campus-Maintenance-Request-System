@@ -19,9 +19,8 @@ const description = document.getElementById("description");
 
 // Functions
 function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return email.includes("@") && email.includes(".");
 }
-
 function showError(input, message) {
     input.style.border = "2px solid red";
     input.title = message;
