@@ -59,3 +59,50 @@ description.addEventListener("focus", function () {
 description.addEventListener("blur", function () {
     description.style.backgroundColor = "";
 });
+// Form Validation
+form.addEventListener("submit", function (event) {
+
+    clearErrors();
+
+    let valid = true;
+
+    if (fullname.value.trim() === "") {
+        showError(fullname, "Full Name is required");
+        valid = false;
+    }
+
+    if (studentid.value.trim() === "") {
+        showError(studentid, "Student ID is required");
+        valid = false;
+    }
+
+    if (!validateEmail(email.value)) {
+        showError(email, "Enter a valid email");
+        valid = false;
+    }
+
+    if (phone.value.trim() === "") {
+        showError(phone, "Phone number is required");
+        valid = false;
+    }
+
+    if (building.value === "") {
+        showError(building, "Select a building");
+        valid = false;
+    }
+
+    if (category.value === "") {
+        showError(category, "Select a category");
+        valid = false;
+    }
+
+    if (description.value.trim().length < 10) {
+        showError(description, "Description must be at least 10 characters");
+        valid = false;
+    }
+
+    if (!valid) {
+        event.preventDefault();
+    }
+
+});
