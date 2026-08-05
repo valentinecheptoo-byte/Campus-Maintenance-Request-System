@@ -145,4 +145,8 @@ footer {
   section {
     padding: 15px;
   }
+  /* Utility helper */
+.text-center {
+  text-align: center;
+}
 }
