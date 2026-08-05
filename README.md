@@ -20,6 +20,30 @@ The Campus Maintenance Request System is a web application that allows students 
 
 ## Team Members
 - Amal Abdulaziz – HTML and accessibility lead
+- Tiffany Wangui – CSS
+- Nikita Ngatia –
+# Campus Maintenance Request System
+
+## Project Description
+The Campus Maintenance Request System is a web application that allows students and staff to report maintenance issues such as electrical faults, plumbing problems, internet issues, furniture damage, and cleaning requests.
+
+## Features
+- Submit maintenance requests
+- Store reports in a MySQL database
+- Categorize faults
+- Set priority level
+- Record the date of reporting
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- PHP
+- MySQL
+- XAMPP
+
+## Team Members
+- Amal Abdulaziz – HTML and accessibility lead
 - Tiffany Wangui – CSS and responsive design
 - Nikita Ngatia – JavaScript
 - Valentine Cheptoo – PHP & MySQL Database
@@ -37,3 +61,4 @@ The Campus Maintenance Request System is a web application that allows students 
 - Email notifications
 - File upload for fault images
 - Track repair status
+
