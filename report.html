@@ -24,20 +24,22 @@
         <section>
             <h2>Maintenance Fault Report Form</h2>
 
-            <form action="process.php" method="post">
+<p>
+    Please complete all required fields before submitting your maintenance request.
+    Providing accurate information helps the maintenance team respond more quickly.
+</p>
+<form action="process.php" method="post">
+                    <label for="fullname">Full Name</label><br>
+<input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
 
-                <label for="fullname">Full Name</label><br>
-                <input type="text" id="fullname" name="fullname" required><br><br>
+<label for="studentid">Student/Staff ID</label><br>
+<input type="text" id="studentid" name="studentid" placeholder="Enter your student or staff ID" required><br><br>
 
-                <label for="studentid">Student/Staff ID</label><br>
-                <input type="text" id="studentid" name="studentid" required><br><br>
+<label for="email">Email Address</label><br>
+<input type="email" id="email" name="email" placeholder="example@strathmore.edu" required><br><br>
 
-                <label for="email">Email Address</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="phone">Phone Number</label><br>
-                <input type="tel" id="phone" name="phone" required><br><br>
-
+<label for="phone">Phone Number</label><br>
+<input type="tel" id="phone" name="phone" placeholder="07XXXXXXXX" required><br><br>
                 <label for="building">Building</label><br>
                 <select id="building" name="building" required>
                     <option value="">--Select Building--</option>
@@ -80,10 +82,12 @@
 
                 <br><br>
 
-                <input type="submit" value="Submit Report">
-                <input type="reset" value="Clear Form">
+                
 
-            </form>
+                 <input type="submit" value="Submit Report">
+    <input type="reset" value="Clear Form">
+
+</form>
         </section>
 
     </main>
