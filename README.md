@@ -20,7 +20,7 @@ The Campus Maintenance Request System is a web application that allows students 
 
 ## Team Members
 - Amal Abdulaziz – HTML and accessibility lead
-- Tiffany Wangui – CSS
+- Tiffany Wangui – CSS and responsive design
 - Nikita Ngatia – JavaScript
 - Valentine Cheptoo – PHP & MySQL Database
 
